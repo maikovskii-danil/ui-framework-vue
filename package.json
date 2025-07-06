@@ -6,13 +6,13 @@
   "license": "MIT",
   "author": "maikovskii-danil",
   "main": "src/index.ts",
-  "homepage": "https://github.com/maikovskii-danil/uikit-vue#readme",
+  "homepage": "https://github.com/maikovskii-danil/ui-framework-vue#readme",
   "bugs": {
-    "url": "https://github.com/maikovskii-danil/uikit-vue/issues"
+    "url": "https://github.com/maikovskii-danil/ui-framework-vue/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maikovskii-danil/uikit-vue.git"
+    "url": "git+https://github.com/maikovskii-danil/ui-framework-vue.git"
   },
   "scripts": {
     "prebuild": "npm clean-install --fund false",
