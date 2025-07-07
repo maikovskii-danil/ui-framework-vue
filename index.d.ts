@@ -8,11 +8,11 @@ declare module '@maikovskii-danil/ui-framework-vue' {
       text?: string;
       visible?: boolean;
     },
-    {},
     any,
-    {},
-    {},
-    {},
+    any,
+    any,
+    any,
+    any,
     {
       close: () => void;
     }
@@ -27,14 +27,14 @@ declare module '@maikovskii-danil/ui-framework-vue' {
       withError?: boolean;
       error?: string;
     },
-    {},
-    {},
-    {},
-    {},
-    {},
+    any,
+    any,
+    any,
+    any,
+    any,
     {
-      'focus': () => void;
-      'onUpdate:modelValue'?: (value: string) => void;
+      'focus'?: () => void;
+      'update:modelValue'?: (value: string) => void;
     }
   >;
 
@@ -42,13 +42,13 @@ declare module '@maikovskii-danil/ui-framework-vue' {
     {
       type?: 'button' | 'submit' | 'reset';
       class?: string;
-      styleStrategy?: 'primary' | 'danger';
+      styleStrategy?: 'primary' | 'danger' | 'neutral';
     },
-    {},
-    {},
-    {},
-    {},
-    {},
+    any,
+    any,
+    any,
+    any,
+    any,
     {
       click: (event: MouseEvent) => void;
     }
@@ -58,11 +58,11 @@ declare module '@maikovskii-danil/ui-framework-vue' {
     {
       visible?: boolean;
     },
-    {},
     any,
-    {},
-    {},
-    {},
+    any,
+    any,
+    any,
+    any,
     {
       close: () => void;
     }
@@ -71,7 +71,7 @@ declare module '@maikovskii-danil/ui-framework-vue' {
   export const AppSelect: DefineComponent<{
     'modelValue'?: string;
     'options': Array<{ id: string; displayName: string }>;
-    'onUpdate:modelValue'?: (value: string) => void;
+    'update:modelValue'?: (value: string) => void;
   }>;
 
   export interface IHeaderCell {

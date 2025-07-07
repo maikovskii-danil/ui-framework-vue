@@ -1,11 +1,11 @@
 {
   "name": "@maikovskii-danil/ui-framework-vue",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "prettier": "@maikovskii-danil/prettier-config-vue",
   "type": "module",
   "license": "MIT",
   "author": "maikovskii-danil",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "types": "index.d.ts",
   "homepage": "https://github.com/maikovskii-danil/ui-framework-vue#readme",
   "bugs": {
@@ -21,7 +21,10 @@
     "prelint": "npm clean-install --fund false --audit false",
     "lint": "npm run lintOnly",
     "lintOnly": "eslint --config ./src/eslint.config.ts",
-    "prettierCheck": "prettier --check ."
+    "postlintOnly": "echo 'lint is done'",
+    "format": "prettier --write --ignore-unknown src/",
+    "prettierCheck": "prettier --check --ignore-unknown src/",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@vueuse/core": "^13.2.0",

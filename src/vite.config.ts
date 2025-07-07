@@ -16,8 +16,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: './src/index.ts',
-      name: 'uikit-vue',
-      fileName: () => `index.js`,
+      fileName: () => 'index.js',
       formats: ['es'],
     },
     rollupOptions: {
