@@ -1,3 +1,5 @@
+import './style.css';
+
 export { default as AppAlert } from './uikit/app-alert.vue';
 export { default as AppButton } from './uikit/app-button.vue';
 export { default as AppInput } from './uikit/app-input.vue';

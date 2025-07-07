@@ -20,7 +20,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', '@vueuse/core'],
       output: {
         globals: {
           vue: 'Vue',
