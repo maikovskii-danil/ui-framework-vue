@@ -11,7 +11,7 @@
 ## ⚙️ Настройка
 Добавьте сканирование классов Tailwind из пакета (показан пример @source для путя /src/*.css):
 
-`@source '../node_modules/@maikovskii-danil/ui-framework-vue/dist/index.js';`
+`@source '../node_modules/@maikovskii-danil/ui-framework-vue/dist/ui-framework-vue.css';`
 
 ## 🤝 Зависимости (peerDependencies)
 
@@ -34,7 +34,7 @@
 - `<AppSelect />`
 - `<AppTable />`
 
-###### ✨ Особенности
+## ✨ Особенности
 
 - Поддержка v-model
 - Типизация на уровне пакета (.d.ts файлы)
