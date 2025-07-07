@@ -18,25 +18,41 @@ declare module '@maikovskii-danil/ui-framework-vue' {
     }
   >;
 
-  export const AppInput: DefineComponent<{
-    modelValue?: string;
-    placeholder?: string;
-    type?: string;
-    autocomplete?: string;
-    withError?: boolean;
-    error?: string;
-  }, {}, {}, {}, {}, {}, {
-    focus: () => void;
-    'onUpdate:modelValue'?: (value: string) => void;
-  }>;
+  export const AppInput: DefineComponent<
+    {
+      modelValue?: string;
+      placeholder?: string;
+      type?: string;
+      autocomplete?: string;
+      withError?: boolean;
+      error?: string;
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+      'focus': () => void;
+      'onUpdate:modelValue'?: (value: string) => void;
+    }
+  >;
 
-  export const AppButton: DefineComponent<{
-    type?: 'button' | 'submit' | 'reset';
-    class?: string;
-    styleStrategy?: 'primary' | 'danger';
-  }, {}, {}, {}, {}, {}, {
-    click: (event: MouseEvent) => void;
-  }>;
+  export const AppButton: DefineComponent<
+    {
+      type?: 'button' | 'submit' | 'reset';
+      class?: string;
+      styleStrategy?: 'primary' | 'danger';
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+      click: (event: MouseEvent) => void;
+    }
+  >;
 
   export const AppModal: DefineComponent<
     {
