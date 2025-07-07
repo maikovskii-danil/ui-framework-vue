@@ -18,6 +18,7 @@ export default defineConfig([
     files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/no-explicit-any': 0,
+      '@typescript-eslint/no-empty-object-type': 0,
     },
   },
   {

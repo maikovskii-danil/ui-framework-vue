@@ -6,6 +6,7 @@
   "license": "MIT",
   "author": "maikovskii-danil",
   "main": "src/index.ts",
+  "types": "index.d.ts",
   "homepage": "https://github.com/maikovskii-danil/ui-framework-vue#readme",
   "bugs": {
     "url": "https://github.com/maikovskii-danil/ui-framework-vue/issues"
