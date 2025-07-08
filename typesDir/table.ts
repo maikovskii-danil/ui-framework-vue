@@ -1,25 +1,21 @@
 export interface IHeaderCell {
   id: string;
   displayName: string;
-  twStyle: string;
+  twStyle?: string;
 }
 
 export interface ICell {
+  id?: string;
   value: string;
-  twStyle: string;
+  twStyle?: string;
 }
 
 export interface IRow {
-  id: string;
+  id?: string;
   cells: ICell[];
 }
 
 export interface ITable {
   headers: IHeaderCell[];
   rows: IRow[];
-}
-
-export interface ITableProps {
-  headers: IHeaderCell[];
-  rows: Omit<IRow, 'id'>[];
 }

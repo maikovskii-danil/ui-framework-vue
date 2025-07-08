@@ -1,23 +1,32 @@
 <template>
-  <Transition name="opacity">
+  <TransitionGroup name="opacity">
     <div
-      v-if="visible"
-      class="fixed z-1"
+      v-show="visible"
+      key="modal-overlay"
+      class="fixed z-1 top-0 left-0 right-0 bottom-0 opacity-40 bg-black"
+    />
+    <div
+      v-show="visible"
+      key="modal-content"
+      class="fixed z-1 top-0 left-0 right-0 bottom-0 flex items-center justify-center"
     >
-      <div
-        class="fixed top-0 left-0 right-0 bottom-0 opacity-40 bg-black"
-        @click="emit('close')"
-      />
-      <div
-        class="fixed top-2/4 left-2/4 flex items-center justify-center m-auto -translate-1/2"
-      >
-        <slot />
+      <div ref="template-ref">
+        <slot name="default" />
       </div>
     </div>
-  </Transition>
+  </TransitionGroup>
 </template>
 
 <script setup lang="ts">
+import { onClickOutside } from '@vueuse/core';
+import { useTemplateRef } from 'vue';
+
 const emit = defineEmits<{ (e: 'close'): void }>();
 const { visible } = defineProps<{ visible: boolean }>();
+
+const templateRef = useTemplateRef<HTMLElement>('template-ref');
+
+onClickOutside(templateRef, () => {
+  emit('close');
+});
 </script>
