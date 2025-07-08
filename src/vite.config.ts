@@ -10,6 +10,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', `file://${process.cwd()}/`)),
+      'typesDir': fileURLToPath(new URL('./types', `file://${process.cwd()}/`)),
     },
     extensions: ['.js', '.ts', '.json'],
   },

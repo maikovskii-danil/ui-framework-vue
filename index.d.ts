@@ -1,6 +1,8 @@
-declare module '@maikovskii-danil/ui-framework-vue' {
-  import type { DefineComponent } from 'vue';
+import type { ICell, IHeaderCell, IRow, ITable } from './typesDir/table';
+import type { DefineComponent } from 'vue';
+import type { IDropdownOption } from './typesDir/dropdown';
 
+declare module '@maikovskii-danil/ui-framework-vue' {
   export const AppAlert: DefineComponent<
     {
       styleStrategy?: 'primary' | 'danger';
@@ -71,39 +73,42 @@ declare module '@maikovskii-danil/ui-framework-vue' {
   export const AppSelect: DefineComponent<{
     'modelValue'?: string;
     'options': Array<{ id: string; displayName: string }>;
-    'update:modelValue'?: (value: string) => void;
-  }>;
+    },
+    any,
+    any,
+    any,
+    any,
+    any,
+    {
+      'update:modelValue': (value: string) => void;
+    }
+  >;
 
-  export interface IHeaderCell {
-    id: string;
-    displayName: string;
-    twStyle: string;
-  }
+  export const AppTable: DefineComponent<
+    {
+      table?: ITable;
+      emptyText?: string;
+      emptyHeightInRows?: number;
+      initialRowHeight?: number;
+      debugComputedTable?: boolean;
+    }
+  >;
 
-  export interface ICell {
-    value: string;
-    twStyle: string;
-  }
+  export const AppDropdown: DefineComponent<
+    {
+      modelValue: string | null;
+      options: IDropdownOption[];
+      zIndex?: number;
+    },
+    any,
+    any,
+    any,
+    any,
+    any,
+    {
+      'update:modelValue': (value: string) => void;
+    }
+  >;
 
-  export interface IRow {
-    id: string;
-    cells: ICell[];
-  }
-
-  export interface ITable {
-    headers: IHeaderCell[];
-    rows: IRow[];
-  }
-
-  export interface ITableProps {
-    headers: IHeaderCell[];
-    rows: Omit<IRow, 'id'>[];
-  }
-
-  export const AppTable: DefineComponent<{
-    table?: ITable | ITableProps;
-    emptyText?: string;
-    emptyHeightInRows?: number;
-    initialRowHeight?: number;
-  }>;
+  export { ITable, IHeaderCell, ICell, IRow, IDropdownOption };
 }

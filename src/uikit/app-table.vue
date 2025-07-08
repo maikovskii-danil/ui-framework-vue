@@ -43,14 +43,14 @@
               :style="`height: ${initialRowHeight}px`"
             >
               <div
-                v-for="(cell, index) in row.cells"
-                :key="computedTable.headers[index]?.id ?? 'unknown'"
+                v-for="cell in row.cells"
+                :key="cell.id"
                 :class="cell.twStyle"
               >
                 <slot
                   :row
                   :cell
-                  :name="computedTable.headers[index]?.id ?? 'unknown'"
+                  :name="cell.id"
                 >
                   {{ cell.value }}
                 </slot>
@@ -71,9 +71,9 @@
 </template>
 
 <script setup lang="ts">
-import type { ITable, ITableProps } from '@/types/table';
 import { refDebounced, refThrottled } from '@vueuse/core';
 import { DEBOUNCE_DELAY } from '@/consts';
+import type { ITable } from 'typesDir/table';
 import { computed } from 'vue';
 
 const EMPTY_HEIGHT_IN_ROWS = 6;
@@ -84,22 +84,36 @@ const {
   emptyText = 'Ничего нет',
   emptyHeightInRows = EMPTY_HEIGHT_IN_ROWS,
   initialRowHeight = INITIAL_ROW_HEIGHT,
+  debugComputedTable = false,
 } = defineProps<{
-  table?: ITableProps | ITable;
+  table?: ITable;
   emptyText?: string;
   emptyHeightInRows?: number;
   initialRowHeight?: number;
+  debugComputedTable?: boolean;
 }>();
 
 const computedTable = computed<ITable>(() => {
   if (table && table.headers?.length && table.rows?.length) {
-    return {
+    const newTable: ITable = {
       headers: table.headers,
-      rows: table.rows.map((item, index) => ({
-        ...item,
-        id: table.headers[index]?.id ?? '== UNKNOWN HEADER ==',
+      rows: table.rows.map((row, rowIndex) => ({
+        ...row,
+        id: row?.id ?? String(rowIndex + 1),
+        cells: row.cells.map((cell, cellIndex) => ({
+          ...cell,
+          id:
+            cell?.id ?? table.headers[cellIndex]?.id ?? '== UNKNOWN HEADER ==',
+        })),
       })),
-    } as ITable;
+    };
+
+    if (debugComputedTable) {
+      // eslint-disable-next-line no-console
+      console.log('computedTable:', newTable);
+    }
+
+    return newTable;
   }
 
   return { headers: [], rows: [] };
