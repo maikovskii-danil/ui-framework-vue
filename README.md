@@ -21,7 +21,7 @@
 
 `npm run build`
 
-###### Бандл находится в dist/index.js, предназначен для использования в @source директиве Tailwind.
+###### Бандл находится в dist/index.js
 
 ## 📚 Компоненты
 
@@ -31,6 +31,7 @@
 - `<AppModal />`
 - `<AppSelect />`
 - `<AppTable />`
+- `<AppDropdown />`
 
 ## ✨ Особенности
 
@@ -128,3 +129,7 @@
 
 #### События:
 `@update:modelValue` — вызывается при выборе опции
+
+---
+
+[CHANGELOG.md](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/src/CHANGELOG.md)
