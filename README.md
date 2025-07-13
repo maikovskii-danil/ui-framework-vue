@@ -2,6 +2,10 @@
 
 Минималистичный UI Framework для Vue 3, написанный с использованием Tailwind CSS и VueUse.
 
+## Storybook-like deploy
+
+##### [Ссылка на Vercel deploy](https://ui-framework-vue.vercel.app/)
+
 ## 🚀 Установка
 
 `npm install @maikovskii-danil/ui-framework-vue`
@@ -17,6 +21,26 @@
 - "@vueuse/core": "^13.2.0",
 - "tailwindcss": "^4.1.11",
 - "vue": "^3.5.16"
+
+## 🛠 About Enviroment
+
+🖥️ Проект разработан и протестирован для macOS/linux для Chrome
+
+⚙️ Node.js: 22.17.0
+
+📦 npm: 11.4.2
+
+❗ Поддержка Windows не гарантируется
+
+##### Но Вы можете попробовать его запустить на Windows.
+
+##### Для этого удалите поле "os" в package.json или измените на значение ниже:
+
+```json
+{
+  "os": ["darwin", "linux", "win32"]
+}
+```
 
 ## 📦 Сборка пакета
 
@@ -52,7 +76,7 @@
 
 ## 📚 Документация
 
-[API Reference](https://github.com/maikovskii-danil/ui-framework-vue/blob/develop/src/API_Reference.story.vue)
+[API Reference](https://ui-framework-vue.vercel.app/story/api)
 
 [CHANGELOG.md](https://github.com/maikovskii-danil/ui-framework-vue/blob/develop/docs/CHANGELOG.md)
 
