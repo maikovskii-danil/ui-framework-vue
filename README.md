@@ -2,10 +2,6 @@
 
 Минималистичный UI Framework для Vue 3, написанный с использованием Tailwind CSS и VueUse.
 
-## Storybook-like deploy
-
-##### [Ссылка на Vercel deploy](https://ui-framework-vue.vercel.app/)
-
 ## 🚀 Установка
 
 `npm install @maikovskii-danil/ui-framework-vue`
@@ -74,10 +70,16 @@
 
 `<AppButton @click="submit">Сохранить</AppButton>`
 
-## 📚 Документация
+## 🔗 Полезные ссылки
 
-[API Reference](https://ui-framework-vue.vercel.app/story/api)
+#### 📘 Интерактивная документация компонентов (Histoire) по ссылке на Vercel:
 
-[CHANGELOG.md](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/CHANGELOG.md)
+###### [ui-framework-vue.vercel.app](https://ui-framework-vue.vercel.app/)
 
-[npm scripts map](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/scripts-map.md)
+#### 📝 История версий и список изменений:
+
+###### [🕒 CHANGELOG.md](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/CHANGELOG.md)
+
+#### ⚙️ Скрипты разработки (npm scripts):
+
+###### [Документация всех npm run-команд, с пояснениями по задачам](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/scripts-map.md)

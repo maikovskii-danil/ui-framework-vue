@@ -2,7 +2,7 @@
   <Transition name="opacity">
     <div
       v-if="visible"
-      class="border border-solid border-l-8 p-8 bg-white dark:bg-gray-900"
+      class="border! border-solid! border-l-8! p-8 bg-white dark:bg-gray-900"
       :class="twCSS"
     >
       <div class="text-3xl">{{ title }}</div>
@@ -51,11 +51,11 @@ const textCache = computed((previous) => text || previous);
 const twCSS = computed(() => {
   switch (styleStrategy) {
     case 'danger': {
-      return 'text-red-500 border-red-500 dark:text-red-600 dark:border-red-600';
+      return 'text-red-500 border-red-500! dark:text-red-600 dark:border-red-600!';
     }
     case 'primary':
     default: {
-      return 'text-green-500 border-green-500 dark:text-green-600 dark:border-green-600';
+      return 'text-green-500 border-green-500! dark:text-green-600 dark:border-green-600!';
     }
   }
 });

@@ -19,10 +19,7 @@ export default defineConfig({
     favicon: './public/favicon.ico',
   },
   setupFile: './src/histoire.setup.ts',
-  backgroundPresets: [
-    { label: 'Light', color: 'var(--color-white)' },
-    { label: 'Dark', color: 'var(--color-gray-700)' },
-  ],
+  backgroundPresets: [{ label: 'Default', color: 'transparent' }],
   collectMaxThreads: 2,
   vite: {
     root: process.cwd(),
