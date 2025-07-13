@@ -7,6 +7,7 @@
       <template #trigger="{ toggle }">
         <button
           :class="[
+            'relative',
             'w-full',
             'flex items-center',
             'p-4 border',
@@ -31,15 +32,15 @@
           </div>
           <div
             :class="[
-              'absolute top-2/4 -translate-1/2 right-3',
+              'absolute top-2/4 -translate-1/2! right-3',
               'w-4 h-4',
               'before:block before:w-1 before:h-3.5',
-              'before:absolute before:top-1/4 before:-translate-1/2 before:right-1',
+              'before:absolute before:top-1/4 before:-translate-1/2! before:right-1',
               'before:-rotate-45',
               'before:bg-gray-500',
               'before:rounded',
               'after:block after:w-1 after:h-3.5',
-              'after:absolute after:top-3/4 after:-translate-1/2 after:right-1',
+              'after:absolute after:top-3/4 after:-translate-1/2! after:right-1',
               'after:rotate-45',
               'after:bg-gray-500',
               'after:rounded',

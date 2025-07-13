@@ -1,6 +1,6 @@
 {
   "name": "@maikovskii-danil/ui-framework-vue",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "prettier": "@maikovskii-danil/prettier-config-vue",
   "type": "module",
   "license": "MIT",
