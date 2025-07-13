@@ -1,14 +1,20 @@
 <template>
   <Story
-    responsive-disabled
     id="AppModal"
+    responsive-disabled
     title="AppModal"
   >
     <Variant title="AppModal">
-      <div v-show="!visible" class="p-8">
+      <div
+        v-show="!visible"
+        class="p-8"
+      >
         <AppButton @click="visible = true">Open</AppButton>
       </div>
-      <AppModal :visible @close="visible = false"">
+      <AppModal
+        :visible
+        @close="visible = false"
+      >
         <template #default>
           <div class="p-8 w-250 h-300 bg-white rounded-2xl">modal</div>
         </template>

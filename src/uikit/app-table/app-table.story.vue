@@ -4,8 +4,8 @@ import AppTable from './app-table.vue';
 
 <template>
   <Story
-    responsive-disabled
     id="AppTable"
+    responsive-disabled
     title="AppTable"
   >
     <Variant title="AppTable">

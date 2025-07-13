@@ -1,7 +1,7 @@
 <template>
   <Story
-    responsive-disabled
     id="AppButton"
+    responsive-disabled
     title="AppButton"
   >
     <Variant title="primary">

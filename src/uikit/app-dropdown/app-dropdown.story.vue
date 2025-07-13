@@ -1,7 +1,7 @@
 <template>
   <Story
-    responsive-disabled
     id="AppDropdown"
+    responsive-disabled
     title="AppDropdown"
   >
     <Variant title="AppDropdown">
@@ -33,10 +33,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { computed, ref } from 'vue';
 
-import AppDropdown from './app-dropdown.vue';
 import AppButton from '../app-button/app-button.vue';
+import AppDropdown from './app-dropdown.vue';
 
 const modelValue = ref('1');
 
@@ -55,7 +55,7 @@ const options = [
   },
 ];
 
-const selectedOption = computed(() => {
-  return options.find((option) => option.id === modelValue.value);
-});
+const selectedOption = computed(() =>
+  options.find((option) => option.id === modelValue.value),
+);
 </script>

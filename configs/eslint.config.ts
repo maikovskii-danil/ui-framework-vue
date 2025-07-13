@@ -4,7 +4,7 @@ import pluginVue from 'eslint-plugin-vue';
 import tseslint from 'typescript-eslint';
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', '.histoire', 'src/uikit-in-dev']),
   {
     files: ['**/*.{js,ts,vue}'],
     extends: [

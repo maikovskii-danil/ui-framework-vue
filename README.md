@@ -52,6 +52,6 @@
 
 ## 📚 Документация
 
-- [API Reference]('https://github.com/maikovskii-danil/ui-framework-vue/blob/main/src/API_Reference.story.vue')
-- [CHANGELOG.md]('https://github.com/maikovskii-danil/ui-framework-vue/blob/main/src/CHANGELOG.md')
-- [npm scripts map]('https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/scripts-map.md')
+- [API Reference]('https://github.com/maikovskii-danil/ui-framework-vue/blob/develop/src/API_Reference.story.vue')
+- [CHANGELOG.md]('https://github.com/maikovskii-danil/ui-framework-vue/blob/develop/src/CHANGELOG.md')
+- [npm scripts map]('https://github.com/maikovskii-danil/ui-framework-vue/blob/develop/docs/scripts-map.md')

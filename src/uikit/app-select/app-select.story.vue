@@ -1,17 +1,17 @@
 <template>
   <Story
-    responsive-disabled
     id="AppSelect"
+    responsive-disabled
     title="AppSelect"
   >
     <Variant title="AppSelect">
       <AppSelect
+        v-model="currentOption"
         :options="[
           { id: '1', displayName: 'Dropdown Option 1' },
           { id: '2', displayName: 'Dropdown Option 2' },
           { id: '3', displayName: 'Dropdown Option 3' },
         ]"
-        v-model="currentOption"
       />
     </Variant>
   </Story>

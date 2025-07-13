@@ -1,12 +1,12 @@
 import { URL, fileURLToPath } from 'node:url';
 
 import { defineConfig } from 'histoire';
-import { HstVue } from '@histoire/plugin-vue';
+import { HstVue as hstVue } from '@histoire/plugin-vue';
 import tailwindcss from '@tailwindcss/vite';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-  plugins: [HstVue()],
+  plugins: [hstVue()],
   outDir: '.histoire/dist',
   storyMatch: ['**/*.story.vue'],
   storyIgnored: ['**/node_modules/**', '**/dist/**'],

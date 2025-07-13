@@ -1,8 +1,8 @@
 <template>
   <div class="w-full relative">
     <app-dropdown
-      :options="options"
       v-model="model"
+      :options="options"
     >
       <template #trigger="{ toggle }">
         <button

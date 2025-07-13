@@ -1,7 +1,7 @@
 <template>
   <Story
-    responsive-disabled
     id="AppAlert"
+    responsive-disabled
     title="AppAlert"
   >
     <Variant title="primary">
