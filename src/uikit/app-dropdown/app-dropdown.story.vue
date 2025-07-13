@@ -20,7 +20,7 @@
           </template>
           <template #option="{ option, select }">
             <button
-              class="p-2 text-white text-left cursor-pointer w-full"
+              class="p-2 text-white! dark:text-white! text-left cursor-pointer w-full"
               @click="select(option)"
             >
               {{ option.displayName }}

@@ -5,14 +5,16 @@
     title="AppSelect"
   >
     <Variant title="AppSelect">
-      <AppSelect
-        v-model="currentOption"
-        :options="[
-          { id: '1', displayName: 'Dropdown Option 1' },
-          { id: '2', displayName: 'Dropdown Option 2' },
-          { id: '3', displayName: 'Dropdown Option 3' },
-        ]"
-      />
+      <div class="text-white! dark:text-white!">
+        <AppSelect
+          v-model="currentOption"
+          :options="[
+            { id: '1', displayName: 'Dropdown Option 1' },
+            { id: '2', displayName: 'Dropdown Option 2' },
+            { id: '3', displayName: 'Dropdown Option 3' },
+          ]"
+        />
+      </div>
     </Variant>
   </Story>
 </template>
