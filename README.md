@@ -78,6 +78,6 @@
 
 [API Reference](https://ui-framework-vue.vercel.app/story/api)
 
-[CHANGELOG.md](https://github.com/maikovskii-danil/ui-framework-vue/blob/develop/docs/CHANGELOG.md)
+[CHANGELOG.md](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/CHANGELOG.md)
 
-[npm scripts map](https://github.com/maikovskii-danil/ui-framework-vue/blob/develop/docs/scripts-map.md)
+[npm scripts map](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/scripts-map.md)
