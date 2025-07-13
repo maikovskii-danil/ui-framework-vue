@@ -7,6 +7,7 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
   root: process.cwd(),
   plugins: [vue(), tailwindcss()],
+  publicDir: false,
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', `file://${process.cwd()}/`)),
