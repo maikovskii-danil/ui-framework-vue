@@ -22,7 +22,8 @@
           'placeholder:text-gray-400',
           'disabled:cursor-not-allowed',
           'disabled:placeholder:text-gray-400 dark:disabled:placeholder:text-gray-600',
-          'caret-black dark:caret-violet-700',
+          'caret-black dark:caret-white',
+          'text-black dark:text-white',
           error && 'placeholder:text-red-500',
         ]"
         :="$attrs"
