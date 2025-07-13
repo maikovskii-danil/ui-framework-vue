@@ -2,8 +2,7 @@
   <div class="w-full relative">
     <app-dropdown
       :options="options"
-      :model-value="model"
-      @update:model-value="selectOption"
+      v-model="model"
     >
       <template #trigger="{ toggle }">
         <button
@@ -44,7 +43,6 @@
               'after:rotate-45',
               'after:bg-gray-500',
               'after:rounded',
-              false && 'rotate-90',
             ]"
           />
         </button>
@@ -60,7 +58,7 @@
             'hover:bg-violet-700',
             'focus:outline-violet-700',
           ]"
-          @click="selectOption(option.id)"
+          @click="model = option.id"
         >
           {{ option.displayName }}
         </button>
@@ -72,7 +70,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import AppDropdown from './app-dropdown.vue';
+import AppDropdown from '../app-dropdown/app-dropdown.vue';
 
 const { options } = defineProps<{
   options: Array<{ id: string; displayName: string }>;
@@ -98,8 +96,4 @@ const currentDisplayName = computed(() => {
 
   return undefined;
 });
-
-const selectOption = (optionId: string) => {
-  model.value = optionId;
-};
 </script>

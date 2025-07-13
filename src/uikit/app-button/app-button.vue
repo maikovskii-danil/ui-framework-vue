@@ -7,6 +7,7 @@
       'cursor-pointer',
       ...twCSS,
     ]"
+    :type="type"
   >
     <slot></slot>
   </button>
@@ -15,8 +16,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-const { styleStrategy = 'primary' } = defineProps<{
+const { styleStrategy = 'primary', type = 'button' } = defineProps<{
   styleStrategy?: 'primary' | 'confirm' | 'danger' | 'neutral';
+  type?: 'button' | 'submit' | 'reset';
 }>();
 
 const twCSS = computed(() => {

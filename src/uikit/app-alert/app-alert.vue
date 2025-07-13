@@ -26,6 +26,7 @@
 <script setup lang="ts">
 import { computed, useTemplateRef } from 'vue';
 import { useFocus } from '@vueuse/core';
+import AppButton from '../app-button/app-button.vue';
 
 const emit = defineEmits<{ (e: 'close'): void }>();
 

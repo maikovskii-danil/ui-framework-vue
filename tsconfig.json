@@ -13,7 +13,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["vite/client"]
+    "types": ["vite/client", "histoire"]
   },
   "include": ["src", "index.d.ts", "typesDir"],
   "exclude": ["node_modules"]
