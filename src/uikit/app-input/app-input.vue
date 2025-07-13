@@ -18,10 +18,12 @@
       <input
         v-model="model"
         :class="[
-          'w-full p-4 outline-0 dark:text-gray-100',
+          'w-full p-4 outline-0',
           'placeholder:text-gray-400',
           'disabled:cursor-not-allowed',
           'disabled:placeholder:text-gray-400 dark:disabled:placeholder:text-gray-600',
+          'caret-black dark:caret-white',
+          'text-black dark:text-gray-100!',
           error && 'placeholder:text-red-500',
         ]"
         :="$attrs"

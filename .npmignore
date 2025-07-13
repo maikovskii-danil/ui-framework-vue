@@ -2,5 +2,10 @@ node_modules
 .DS_Store
 .vscode
 src
+docs
+configs
+public
 .github
 .husky
+.histoire
+vercel.json

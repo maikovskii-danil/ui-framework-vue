@@ -1,6 +1,7 @@
-import type { ICell, IHeaderCell, IRow, ITable } from './typesDir/table';
 import type { DefineComponent } from 'vue';
+
 import type { IDropdownOption } from './typesDir/dropdown';
+import type { ITable } from './typesDir/table';
 
 declare module '@maikovskii-danil/ui-framework-vue' {
   export const AppAlert: DefineComponent<
@@ -109,6 +110,4 @@ declare module '@maikovskii-danil/ui-framework-vue' {
       'update:modelValue': (value: string) => void;
     }
   >;
-
-  export { ITable, IHeaderCell, ICell, IRow, IDropdownOption };
 }

@@ -7,6 +7,7 @@
       'cursor-pointer',
       ...twCSS,
     ]"
+    :type="type"
   >
     <slot></slot>
   </button>
@@ -15,8 +16,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-const { styleStrategy = 'primary' } = defineProps<{
+const { styleStrategy = 'primary', type = 'button' } = defineProps<{
   styleStrategy?: 'primary' | 'confirm' | 'danger' | 'neutral';
+  type?: 'button' | 'submit' | 'reset';
 }>();
 
 const twCSS = computed(() => {
@@ -24,7 +26,7 @@ const twCSS = computed(() => {
     case 'danger': {
       return [
         'bg-red-600 hover:bg-red-700 active:bg-red-800',
-        'text-white',
+        'text-white! dark:text-white!',
         'focus:outline-red-600',
         'shadow-xl/20',
         'disabled:opacity-60',
@@ -35,7 +37,7 @@ const twCSS = computed(() => {
     case 'confirm': {
       return [
         'bg-green-500 hover:bg-green-600 active:bg-green-700',
-        'text-white',
+        'text-white! dark:text-white!',
         'focus:outline-green-500',
         'shadow-xl/20',
         'disabled:opacity-60',
@@ -48,7 +50,7 @@ const twCSS = computed(() => {
         'bg-white dark:bg-gray-800',
         'hover:bg-gray-100 hover:outline-gray-100',
         'dark:hover:bg-gray-800',
-        'text-gray-900 dark:text-gray-100',
+        'text-gray-900! dark:text-gray-100!',
         'outline-2',
         'outline-white dark:outline-gray-800',
         'focus:outline-gray-300',
@@ -68,7 +70,7 @@ const twCSS = computed(() => {
       return [
         'bg-violet-500 not-disabled:hover:bg-violet-600 not-disabled:active:bg-violet-700',
         'dark:bg-violet-700 dark:not-disabled:hover:bg-violet-600 dark:not-disabled:active:bg-violet-500',
-        'text-white',
+        'text-white! dark:text-white!',
         'focus:outline-violet-500',
         'shadow-xl/20',
         'disabled:opacity-60',
