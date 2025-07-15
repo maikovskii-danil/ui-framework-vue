@@ -16,7 +16,11 @@
         @close="visible = false"
       >
         <template #default>
-          <div class="p-8 w-250 h-300 bg-white rounded-2xl">modal</div>
+          <div
+            class="p-8 w-250 h-300 bg-white dark:bg-gray-600 text-black! dark:text-white! rounded-2xl"
+          >
+            modal
+          </div>
         </template>
       </AppModal>
     </Variant>
