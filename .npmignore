@@ -6,6 +6,5 @@ docs
 configs
 public
 .github
-.husky
 .histoire
 vercel.json
