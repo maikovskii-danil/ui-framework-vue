@@ -3,28 +3,16 @@
     id="AppAlert"
     responsive-disabled
     title="AppAlert"
+    :layout="{ type: 'grid', width: '50%' }"
   >
     <Variant title="primary">
-      <div class="p-8">
-        <app-alert visible />
-      </div>
-      <div class="p-8 w-200">
-        <app-alert visible />
-      </div>
+      <app-alert visible />
     </Variant>
     <Variant title="danger">
-      <div class="p-8">
-        <app-alert
-          visible
-          style-strategy="danger"
-        />
-      </div>
-      <div class="p-8 w-200">
-        <app-alert
-          visible
-          style-strategy="danger"
-        />
-      </div>
+      <app-alert
+        visible
+        style-strategy="danger"
+      />
     </Variant>
   </Story>
 </template>

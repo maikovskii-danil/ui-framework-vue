@@ -3,6 +3,7 @@
     id="AppInput"
     responsive-disabled
     title="AppInput"
+    :layout="{ type: 'grid', width: '50%' }"
   >
     <Variant title="default">
       <div class="p-8">
