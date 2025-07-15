@@ -71,7 +71,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import AppDropdown from '../app-dropdown/app-dropdown.vue';
+import AppDropdown from '@/uikit/app-dropdown.vue';
 
 const { options } = defineProps<{
   options: Array<{ id: string; displayName: string }>;

@@ -8,7 +8,7 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
   plugins: [hstVue()],
   outDir: '.histoire/dist',
-  storyMatch: ['**/*.story.vue'],
+  storyMatch: ['**/stories/*.story.vue'],
   storyIgnored: ['**/node_modules/**', '**/dist/**'],
   tree: {
     file: 'title',

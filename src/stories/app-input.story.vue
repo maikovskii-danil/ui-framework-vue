@@ -22,5 +22,5 @@
 </template>
 
 <script lang="ts" setup>
-import AppInput from './app-input.vue';
+import AppInput from '@/uikit/app-input.vue';
 </script>

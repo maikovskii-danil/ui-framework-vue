@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import AppSelect from './app-select.vue';
+import AppSelect from '@/uikit/app-select.vue';
 import { ref } from 'vue';
 
 const currentOption = ref('1');

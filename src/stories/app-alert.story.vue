@@ -18,5 +18,5 @@
 </template>
 
 <script lang="ts" setup>
-import AppAlert from './app-alert.vue';
+import AppAlert from '@/uikit/app-alert.vue';
 </script>

@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-import AppTable from './app-table.vue';
-</script>
-
 <template>
   <Story
     id="AppTable"
@@ -49,3 +45,7 @@ import AppTable from './app-table.vue';
     </Variant>
   </Story>
 </template>
+
+<script lang="ts" setup>
+import AppTable from '@/uikit/app-table.vue';
+</script>

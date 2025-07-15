@@ -28,6 +28,6 @@
   </Story>
 </template>
 
-<script lang="ts" setup>
-import AppButton from './app-button.vue';
+<script setup lang="ts">
+import AppButton from '@/uikit/app-button.vue';
 </script>

@@ -26,8 +26,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import AppButton from '../app-button/app-button.vue';
-import AppModal from './app-modal.vue';
+import AppButton from '@/uikit/app-button.vue';
+import AppModal from '@/uikit/app-modal.vue';
 
 const visible = ref(true);
 </script>
