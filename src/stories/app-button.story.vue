@@ -3,6 +3,7 @@
     id="AppButton"
     responsive-disabled
     title="AppButton"
+    :layout="{ type: 'grid' }"
   >
     <Variant title="primary">
       <div class="p-8">
@@ -27,6 +28,6 @@
   </Story>
 </template>
 
-<script lang="ts" setup>
-import AppButton from './app-button.vue';
+<script setup lang="ts">
+import AppButton from '@/uikit/app-button.vue';
 </script>

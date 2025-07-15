@@ -3,6 +3,7 @@
     id="AppInput"
     responsive-disabled
     title="AppInput"
+    :layout="{ type: 'grid', width: '50%' }"
   >
     <Variant title="default">
       <div class="p-8">
@@ -21,5 +22,5 @@
 </template>
 
 <script lang="ts" setup>
-import AppInput from './app-input.vue';
+import AppInput from '@/uikit/app-input.vue';
 </script>

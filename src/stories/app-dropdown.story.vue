@@ -35,8 +35,8 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
 
-import AppButton from '../app-button/app-button.vue';
-import AppDropdown from './app-dropdown.vue';
+import AppButton from '@/uikit/app-button.vue';
+import AppDropdown from '@/uikit/app-dropdown.vue';
 
 const modelValue = ref('1');
 
