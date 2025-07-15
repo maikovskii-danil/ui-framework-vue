@@ -33,7 +33,8 @@
     "kill:dev": "npx kill-port 5175",
     "kill:preview": "npx kill-port 5176",
     "story:dev": "histoire dev --config ./configs/histoire.config.ts --port 5175",
-    "story:preview": "histoire preview --config ./configs/histoire.config.ts --port 5176"
+    "story:preview": "histoire preview --config ./configs/histoire.config.ts --port 5176",
+    "prepare": "husky configs/.husky"
   },
   "peerDependencies": {
     "@vueuse/core": "^13.2.0",
