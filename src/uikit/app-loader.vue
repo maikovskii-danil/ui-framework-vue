@@ -1,7 +1,5 @@
 <template>
-  <div class="h-[100px] flex items-center justify-center">
-    <div class="loader"></div>
-  </div>
+  <div class="loader"></div>
 </template>
 
 <style scoped>
