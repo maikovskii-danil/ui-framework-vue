@@ -31,5 +31,5 @@
 </template>
 
 <script setup lang="ts">
-import AppCheckbox from '@/uikit-in-dev/app-checkbox.vue';
+import AppCheckbox from '@/uikit/app-checkbox.vue';
 </script>
