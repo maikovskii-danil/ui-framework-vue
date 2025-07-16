@@ -45,7 +45,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import AppRadio from '@/uikit-in-dev/app-radio.vue';
+import AppRadio from '@/uikit/app-radio.vue';
 
 const defaultState = ref<string>('option1');
 const disabledState = ref<string>('option1');
