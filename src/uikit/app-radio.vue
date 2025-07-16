@@ -33,7 +33,6 @@ import { computed } from 'vue';
 const model = defineModel<string>();
 
 const { value = '== undefined ==', disabled = false } = defineProps<{
-  modelValue?: string;
   value?: string;
   disabled?: boolean;
 }>();
