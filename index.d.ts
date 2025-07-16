@@ -112,8 +112,8 @@ declare module '@maikovskii-danil/ui-framework-vue' {
 
   export const AppCheckbox: DefineComponent<
     {
-      modelValue: boolean;
-      disabled: boolean;
+      modelValue?: boolean;
+      disabled?: boolean;
     },
     any,
     any,
