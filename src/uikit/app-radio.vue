@@ -13,11 +13,11 @@
           'w-8 h-8',
           'bg-blue-300 dark:bg-blue-900',
           'border-[1px]! rounded-full',
-          'border-blue-500! dark:border-blue-700!',
+          'border-blue-400! dark:border-blue-700!',
           'before:content-[\'\'] before:block',
           'before:w-4 before:h-4 before:rounded-full',
           'flex items-center justify-center',
-          isChecked && 'before:bg-blue-600',
+          isChecked && 'before:bg-blue-500',
           disabled
             && 'dark:border-gray-600! dark:bg-gray-800 opacity-60 cursor-not-allowed',
         ]"
