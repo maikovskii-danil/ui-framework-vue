@@ -4,7 +4,7 @@ const useDarkCustom = () => {
   const isDark = useDark({
     selector: 'html',
     attribute: 'class',
-    valueDark: 'htw-dark',
+    valueDark: 'hst-dark',
     valueLight: '',
   });
   const toggleIsDark = useToggle(isDark);

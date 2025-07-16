@@ -53,6 +53,9 @@
 - `<AppSelect />`
 - `<AppTable />`
 - `<AppDropdown />`
+- `<AppTextarea />`
+- `<AppCheckbox />`
+- `<AppRadio />`
 
 ## ✨ Особенности
 
