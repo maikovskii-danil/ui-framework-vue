@@ -71,9 +71,10 @@ declare module '@maikovskii-danil/ui-framework-vue' {
     }
   >;
 
-  export const AppSelect: DefineComponent<{
-    'modelValue'?: string;
-    'options': Array<{ id: string; displayName: string }>;
+  export const AppSelect: DefineComponent<
+    {
+      modelValue?: string;
+      options: Array<{ id: string; displayName: string }>;
     },
     any,
     any,
@@ -85,21 +86,68 @@ declare module '@maikovskii-danil/ui-framework-vue' {
     }
   >;
 
-  export const AppTable: DefineComponent<
-    {
-      table?: ITable;
-      emptyText?: string;
-      emptyHeightInRows?: number;
-      initialRowHeight?: number;
-      debugComputedTable?: boolean;
-    }
-  >;
+  export const AppTable: DefineComponent<{
+    table?: ITable;
+    emptyText?: string;
+    emptyHeightInRows?: number;
+    initialRowHeight?: number;
+    debugComputedTable?: boolean;
+  }>;
 
   export const AppDropdown: DefineComponent<
     {
       modelValue: string | null;
       options: IDropdownOption[];
       zIndex?: number;
+    },
+    any,
+    any,
+    any,
+    any,
+    any,
+    {
+      'update:modelValue': (value: string) => void;
+    }
+  >;
+
+  export const AppCheckbox: DefineComponent<
+    {
+      modelValue: boolean;
+      disabled: boolean;
+    },
+    any,
+    any,
+    any,
+    any,
+    any,
+    {
+      'update:modelValue': (value: boolean) => void;
+    }
+  >;
+
+  export const AppRadio: DefineComponent<
+    {
+      modelValue?: string;
+      value?: string;
+      disabled?: boolean;
+    },
+    any,
+    any,
+    any,
+    any,
+    any,
+    {
+      'update:modelValue': (value: string) => void;
+    }
+  >;
+
+  export const AppTextarea: DefineComponent<
+    {
+      modelValue?: string;
+      disabled?: boolean;
+      placeholder?: string;
+      error?: string;
+      withError?: boolean;
     },
     any,
     any,
