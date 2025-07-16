@@ -7,13 +7,8 @@
   >
     <Variant title="default">
       <div class="p-8 rounded bg-white dark:bg-gray-700 dark:text-white!">
-        <AppCheckbox>Checkbox 1</AppCheckbox>
-        <AppCheckbox
-          checked
-          model-value
-        >
-          Checkbox 2
-        </AppCheckbox>
+        <AppCheckbox v-model="checkboxValue1">Checkbox 1</AppCheckbox>
+        <AppCheckbox v-model="checkboxValue2">Checkbox 2</AppCheckbox>
       </div>
     </Variant>
     <Variant title="disabled">
@@ -31,5 +26,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import AppCheckbox from '@/uikit/app-checkbox.vue';
+
+const checkboxValue1 = ref(true);
+const checkboxValue2 = ref(false);
 </script>
