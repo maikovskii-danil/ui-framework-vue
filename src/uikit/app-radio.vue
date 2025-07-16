@@ -5,6 +5,7 @@
       :value="value"
       type="radio"
       class="appearance-none absolute"
+      :disabled="disabled"
       :="$attrs"
     />
     <div class="flex items-center gap-4">

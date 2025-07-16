@@ -4,6 +4,7 @@
       v-model="model"
       type="checkbox"
       class="appearance-none absolute"
+      :disabled="disabled"
       :="$attrs"
     />
     <div class="flex items-center gap-4">
