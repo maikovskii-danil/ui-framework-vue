@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:where(.htw-dark, .htw-dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --spacing: 2px;
