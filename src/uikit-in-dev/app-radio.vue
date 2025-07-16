@@ -1,45 +1,42 @@
 <template>
-  <label class="flex items-center gap-4 cursor-pointer">
+  <label :class="{ 'cursor-default': disabled, 'cursor-pointer': !disabled }">
     <input
       v-model="model"
+      :value="value"
       type="radio"
-      class="radio"
+      class="appearance-none absolute"
       :="$attrs"
     />
-    <div><slot /></div>
+    <div class="flex items-center gap-4">
+      <div
+        :class="[
+          'w-8 h-8',
+          'bg-blue-300 dark:bg-blue-900',
+          'border-[1px]! rounded-full',
+          'border-blue-500! dark:border-blue-700!',
+          'before:content-[\'\'] before:block',
+          'before:w-4 before:h-4 before:rounded-full',
+          'flex items-center justify-center',
+          isChecked && 'before:bg-blue-600',
+          disabled
+            && 'dark:border-gray-600! dark:bg-gray-800 opacity-60 cursor-not-allowed',
+        ]"
+      ></div>
+      <div><slot /></div>
+    </div>
   </label>
 </template>
 
 <script setup lang="ts">
-const model = defineModel<boolean>();
+import { computed } from 'vue';
+
+const model = defineModel<string>();
+
+const { value = '== undefined ==', disabled = false } = defineProps<{
+  modelValue?: string;
+  value?: string;
+  disabled?: boolean;
+}>();
+
+const isChecked = computed(() => model.value === value);
 </script>
-
-<style scoped>
-.radio {
-  all: unset;
-  box-sizing: border-box;
-  border: 1px solid #909ca9;
-  border-radius: 8px;
-  width: 16px;
-  height: 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: all 0.2s ease;
-
-  &:checked {
-    background: #0363c9;
-    border: 1px solid #0363c9;
-  }
-  &::before {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    border-radius: 3px;
-    background: #fff;
-  }
-}
-</style>
