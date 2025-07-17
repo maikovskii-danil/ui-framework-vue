@@ -11,7 +11,7 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force
       - name: Install specific npm version
-        run: npm install -g npm@11.4.2
+        run: npm install  --fund false --audit false -g npm@11.4.2
       - uses: actions/checkout@v4
       - name: Audit
         run: |
