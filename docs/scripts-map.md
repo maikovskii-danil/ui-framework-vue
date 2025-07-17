@@ -38,14 +38,16 @@ Documentation of npm scripts defined in `package.json`.
 
 ## 💄 Linting & Formatting
 
-| Script          | Description                                        |
-| --------------- | -------------------------------------------------- |
-| `lint`          | Runs ESLint after `prelint` setup                  |
-| `prelint`       | Runs clean install before linting                  |
-| `lintOnly`      | Runs ESLint directly (no pre-step)                 |
-| `postlintOnly`  | Prints confirmation message after linting          |
-| `format`        | Formats files in `src/` using Prettier             |
-| `prettierCheck` | Checks formatting in `src/` without making changes |
+| Script          | Description                                                   |
+| --------------- | ------------------------------------------------------------- |
+| `lint`          | Runs ESLint after `prelint` setup                             |
+| `prelint`       | Runs clean install before linting                             |
+| `lintOnly`      | Runs ESLint directly (no pre-step)                            |
+| `postlintOnly`  | Prints confirmation message after linting                     |
+| `format`        | Formats files in `src/` using Prettier                        |
+| `prettierCheck` | Checks formatting in `src/` without making changes            |
+| `typecheck`     | Runs TypeScript compiler in type-check mode only (`--noEmit`) |
+| `posttypecheck` | Prints confirmation message after type check                  |
 
 ---
 
