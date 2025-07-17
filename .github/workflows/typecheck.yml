@@ -1,8 +1,8 @@
-name: eslint
+name: typecheck
 on: [push]
 permissions: {}
 jobs:
-  eslint:
+  typecheck:
     runs-on: macos-14
     steps:
       - uses: actions/setup-node@v4
@@ -13,5 +13,7 @@ jobs:
       - name: Install specific npm version
         run: npm install --fund false --audit false -g npm@11.4.2
       - uses: actions/checkout@v4
-      - name: Eslint Check
-        run: npm run lint
+      - name: TypeScript Check
+        run: |
+          npm ci --audit false --fund false
+          npm run typecheck

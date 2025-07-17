@@ -26,6 +26,8 @@
     "postlintOnly": "echo 'lint is done'",
     "format": "prettier --write --ignore-unknown src/",
     "prettierCheck": "prettier --check --ignore-unknown src/",
+    "typecheck": "tsc --noEmit",
+    "posttypecheck": "echo 'typecheck is done'",
     "prepublishOnly": "npm run package:build",
     "story:build": "histoire build --config ./configs/histoire.config.ts",
     "preview:build": "run-s cleanInstall story:build",
