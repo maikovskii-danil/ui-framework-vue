@@ -1,75 +1,74 @@
 # 🧭 Scripts Map
 
-Документация к npm-скриптам в `package.json`.  
-Каждая команда описана по назначению и роли в проекте.
+Documentation of npm scripts defined in `package.json`.
 
 ---
 
-## 🔨 Сборка
+## 🔨 Build
 
-| Скрипт             | Назначение                                          |
-| ------------------ | --------------------------------------------------- |
-| `package:build`    | Сборка библиотеки через Vite (`src/vite.config.ts`) |
-| `prepackage:build` | Clean install & generate перед `package:build`      |
-| `story:build`      | Сборка Histoire (документация/дев-стенд)            |
-| `preview:build`    | Clean install + `story:build`                       |
-
----
-
-## 🚀 Разработка и превью
-
-| Скрипт             | Назначение                                   |
-| ------------------ | -------------------------------------------- |
-| `story:dev`        | Dev-сервер Histoire                          |
-| `prestory:dev`     | Параллельно: clean install + очистка порта   |
-| `story:preview`    | Просмотр Histoire-превью (из папки `dist`)   |
-| `prestory:preview` | Параллельно: `preview:build` + очистка порта |
+| Script             | Description                                          |
+| ------------------ | ---------------------------------------------------- |
+| `package:build`    | Builds the library using Vite (`src/vite.config.ts`) |
+| `prepackage:build` | Runs clean install and index generation before build |
+| `story:build`      | Builds Histoire (docs/dev environment)               |
+| `preview:build`    | Runs clean install and then builds Histoire          |
 
 ---
 
-## 🧹 Поддержка / Очистка
+## 🚀 Development & Preview
 
-| Скрипт         | Назначение                                |
-| -------------- | ----------------------------------------- |
-| `cleanInstall` | Чистая установка                          |
-| `prepare`      | Автоматическая инициализация husky        |
-| `generate`     | Автогенерация index.ts со всеми импортами |
-
----
-
-## 💄 Линтинг и форматирование
-
-| Скрипт          | Назначение                                    |
-| --------------- | --------------------------------------------- |
-| `lint`          | Линт с автоматической подготовкой (`prelint`) |
-| `prelint`       | Clean install перед линтом                    |
-| `lintOnly`      | Линт без подготовки (eslint)                  |
-| `postlintOnly`  | Просто `echo`, подтверждающий завершение      |
-| `format`        | Применение Prettier к `src/`                  |
-| `prettierCheck` | Проверка форматирования `src/` без изменений  |
+| Script             | Description                                       |
+| ------------------ | ------------------------------------------------- |
+| `story:dev`        | Launches Histoire dev server                      |
+| `prestory:dev`     | Runs clean install and kills dev port in parallel |
+| `story:preview`    | Opens preview of Histoire from `/dist`            |
+| `prestory:preview` | Builds preview and kills preview port in parallel |
 
 ---
 
-## 🧯 Утилиты
+## 🧹 Utilities & Autogeneration
 
-| Скрипт         | Назначение               |
-| -------------- | ------------------------ |
-| `kill:dev`     | Убивает порт для dev     |
-| `kill:preview` | Убивает порт для preview |
-
----
-
-## 📦 Публикация
-
-| Скрипт           | Назначение                                   |
-| ---------------- | -------------------------------------------- |
-| `prepublishOnly` | Перед публикацией: запускает `package:build` |
+| Script         | Description                                          |
+| -------------- | ---------------------------------------------------- |
+| `cleanInstall` | Cleans and reinstalls dependencies                   |
+| `prepare`      | Initializes Husky hooks                              |
+| `generate`     | Auto-generates `index.ts` with all component imports |
 
 ---
 
-## 📝 Заметки
+## 💄 Linting & Formatting
 
-- Используется `run-s` / `run-p` из `npm-run-all2` для параллельного и последовательного исполнения.
-- `cleanInstall` — ядро подготовки окружения.
+| Script          | Description                                        |
+| --------------- | -------------------------------------------------- |
+| `lint`          | Runs ESLint after `prelint` setup                  |
+| `prelint`       | Runs clean install before linting                  |
+| `lintOnly`      | Runs ESLint directly (no pre-step)                 |
+| `postlintOnly`  | Prints confirmation message after linting          |
+| `format`        | Formats files in `src/` using Prettier             |
+| `prettierCheck` | Checks formatting in `src/` without making changes |
+
+---
+
+## 🧯 Port Utilities
+
+| Script         | Description           |
+| -------------- | --------------------- |
+| `kill:dev`     | Kills dev server port |
+| `kill:preview` | Kills preview port    |
+
+---
+
+## 📦 Publishing
+
+| Script           | Description                                          |
+| ---------------- | ---------------------------------------------------- |
+| `prepublishOnly` | Builds the package before publishing (`npm publish`) |
+
+---
+
+## 📝 Notes
+
+- Uses `run-s` and `run-p` from [`npm-run-all2`](https://www.npmjs.com/package/npm-run-all2) for sequential and parallel execution.
+- `cleanInstall` is the core environment setup step before most workflows.
 
 ---

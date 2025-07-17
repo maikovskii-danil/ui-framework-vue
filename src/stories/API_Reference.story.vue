@@ -11,127 +11,146 @@
 <docs lang="md">
 # 📘 API Reference
 
+---
+
 ### AppAlert
 
-| Название        | Тип                 | Описание            |
-| --------------- | ------------------- | ------------------- |
-| `title`         | `string`            | Заголовок           |
-| `text`          | `string`            | Основной текст      |
-| `visible`       | `boolean`           | Отображение/скрытие |
-| `styleStrategy` | `primary \| danger` | Визуальный стиль    |
+| Prop            | Type                    | Description          |
+| --------------- | ----------------------- | -------------------- |
+| `title`         | `string`                | Title text           |
+| `text`          | `string`                | Description text     |
+| `visible`       | `boolean`               | Show/hide visibility |
+| `styleStrategy` | `'primary' \| 'danger'` | Visual style variant |
 
-#### События:
+#### Events:
 
-`@close` — вызывается при нажатии на кнопку "Закрыть"
+- `@close` — emitted when the "Close" button is clicked
+
+---
 
 ### AppButton
 
-| Название        | Тип                                               | Описание         |
-| --------------- | ------------------------------------------------- | ---------------- |
-| `type`          | `'button' \| 'submit' \| 'reset'`                 | Тип HTML-кнопки  |
-| `class`         | `string`                                          | Основной текст   |
-| `styleStrategy` | `'primary' \| 'danger' \| 'neutral' \| 'confirm'` | Визуальный стиль |
+| Prop            | Type                                              | Description          |
+| --------------- | ------------------------------------------------- | -------------------- |
+| `type`          | `'button' \| 'submit' \| 'reset'`                 | HTML button type     |
+| `class`         | `string`                                          | Custom CSS class     |
+| `styleStrategy` | `'primary' \| 'danger' \| 'neutral' \| 'confirm'` | Visual style variant |
 
-#### События:
+#### Events:
 
-`@click` — вызывается при клике
+- `@click` — emitted on click
+
+---
 
 ### AppInput
 
-| Название       | Тип       | Описание                                             |
-| -------------- | --------- | ---------------------------------------------------- |
-| `modelValue`   | `string`  | Значение поля                                        |
-| `placeholder`  | `string`  | Текст-подсказка                                      |
-| `type`         | `string`  | Тип поля (`text`, `password`, и т.д.)                |
-| `autocomplete` | `string`  | Подсказки автозаполнения браузера                    |
-| `error`        | `string`  | Текст ошибки                                         |
-| `withError`    | `boolean` | Показывать блок с ошибкой даже при отсутствии текста |
+| Prop           | Type      | Description                                    |
+| -------------- | --------- | ---------------------------------------------- |
+| `modelValue`   | `string`  | Input value                                    |
+| `placeholder`  | `string`  | Placeholder text                               |
+| `type`         | `string`  | Input type (`text`, `password`, etc.)          |
+| `autocomplete` | `string`  | Browser autocomplete value                     |
+| `error`        | `string`  | Error message                                  |
+| `withError`    | `boolean` | Force error block display even without message |
 
-#### События:
+#### Events:
 
-`@update:modelValue` — вызывается при изменении значения
+- `@update:modelValue` — emitted when the input value changes
+
+---
 
 ### AppTextarea
 
-| Название      | Тип       | Описание                                             |
-| ------------- | --------- | ---------------------------------------------------- |
-| `modelValue`  | `string`  | Значение поля                                        |
-| `disabled`    | `boolean` | Отключает интерактивность                            |
-| `placeholder` | `string`  | Текст-подсказка                                      |
-| `error`       | `string`  | Текст ошибки                                         |
-| `withError`   | `string`  | Показывать блок с ошибкой даже при отсутствии текста |
+| Prop          | Type      | Description                                    |
+| ------------- | --------- | ---------------------------------------------- |
+| `modelValue`  | `string`  | Textarea value                                 |
+| `disabled`    | `boolean` | Disable input                                  |
+| `placeholder` | `string`  | Placeholder text                               |
+| `error`       | `string`  | Error message                                  |
+| `withError`   | `boolean` | Force error block display even without message |
 
-#### События:
+#### Events:
 
-`@update:modelValue` — вызывается при изменении значения
+- `@update:modelValue` — emitted on value change
+- `@focus` — emitted when focused
 
-`@focus` — вызывается при фокусе на поле
+---
 
 ### AppModal
 
-| Название  | Тип       | Описание                    |
-| --------- | --------- | --------------------------- |
-| `visible` | `boolean` | Отображение модального окна |
+| Prop      | Type      | Description                        |
+| --------- | --------- | ---------------------------------- |
+| `visible` | `boolean` | Controls visibility (via `v-show`) |
 
-#### События:
+#### Events:
 
-`@close` — вызывается при нажатии на кнопку "Закрыть"
+- `@close` — emitted when clicking outside the modal
+
+---
 
 ### AppSelect
 
-| Название     | Тип                                     | Описание               |
-| ------------ | --------------------------------------- | ---------------------- |
-| `modelValue` | `string`                                | ID выбранного значения |
-| `options`    | `{ id: string; displayName: string }[]` | Список доступных опций |
+| Prop         | Type                                    | Description               |
+| ------------ | --------------------------------------- | ------------------------- |
+| `modelValue` | `string`                                | ID of selected option     |
+| `options`    | `{ id: string; displayName: string }[]` | List of available options |
 
-#### События:
+#### Events:
 
-`@update:modelValue` — вызывается при выборе опции
+- `@update:modelValue` — emitted on option change
+
+---
 
 ### AppTable
 
-| Название             | Тип       | Описание                       |
-| -------------------- | --------- | ------------------------------ |
-| `table`              | `ITable`  | Табличные данные               |
-| `emptyText`          | `string`  | Текст при отсутствии данных    |
-| `emptyHeightInRows`  | `number`  | Высота пустого блока в строках |
-| `initialRowHeight`   | `number`  | Высота строки таблицы (в px)   |
-| `debugComputedTable` | `boolean` | Включить логирование таблицы   |
+| Prop                 | Type      | Description                           |
+| -------------------- | --------- | ------------------------------------- |
+| `table`              | `ITable`  | Table data                            |
+| `emptyText`          | `string`  | Message when table is empty           |
+| `emptyHeightInRows`  | `number`  | Height of empty block in row units    |
+| `initialRowHeight`   | `number`  | Height of a table row in pixels       |
+| `debugComputedTable` | `boolean` | Enable console logging for table data |
+
+---
 
 ### AppDropdown
 
-| Название     | Тип                 | Описание               |
-| ------------ | ------------------- | ---------------------- |
-| `modelValue` | `string \| null`    | ID выбранного значения |
-| `options`    | `IDropdownOption[]` | Список доступных опций |
-| `zIndex`     | `number`            | z-index                |
+| Prop         | Type                | Description              |
+| ------------ | ------------------- | ------------------------ |
+| `modelValue` | `string \| null`    | ID of selected option    |
+| `options`    | `IDropdownOption[]` | List of dropdown options |
+| `zIndex`     | `number`            | Custom z-index value     |
 
-#### События:
+#### Events:
 
-`@update:modelValue` — вызывается при выборе опции
+- `@update:modelValue` — emitted on selection change
+
+---
 
 ### AppCheckbox
 
-| Название     | Тип       | Описание                      |
-| ------------ | --------- | ----------------------------- |
-| `modelValue` | `boolean` | Состояние чекбокса (вкл/выкл) |
-| `disabled`   | `boolean` | Отключает интерактивность     |
+| Prop         | Type      | Description                        |
+| ------------ | --------- | ---------------------------------- |
+| `modelValue` | `boolean` | Checkbox state (checked/unchecked) |
+| `disabled`   | `boolean` | Disable interaction                |
 
-#### События:
+#### Events:
 
-`@update:modelValue` — вызывается при переключении состояния
+- `@update:modelValue` — emitted on toggle
+
+---
 
 ### AppRadio
 
-| Название     | Тип       | Описание                      |
-| ------------ | --------- | ----------------------------- |
-| `modelValue` | `string`  | Значение выбранного пункта    |
-| `value`      | `string`  | Значение текущей радио-кнопки |
-| `disabled`   | `boolean` | Отключает интерактивность     |
+| Prop         | Type      | Description              |
+| ------------ | --------- | ------------------------ |
+| `modelValue` | `string`  | Currently selected value |
+| `value`      | `string`  | Value of the radio       |
+| `disabled`   | `boolean` | Disable interaction      |
 
-#### События:
+#### Events:
 
-`@update:modelValue` — вызывается при выборе радио-кнопки
+- `@update:modelValue` — emitted on selection
 </docs>
 
 <style>

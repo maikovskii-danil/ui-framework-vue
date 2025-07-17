@@ -1,48 +1,64 @@
 # Changelog
 
-Все заметные изменения в этом проекте будут задокументированы в этом файле.
+All significant changes to this project will be documented in this file.
 
 ---
 
-## [3.0.0] - 2025-07-16
+## [3.0.0] – 2025-07-16
 
-### ⚠️ Critical bugfix of new imports from 2.2.0
+### ⚠️ Critical Bug Fix
 
-## [2.2.0] - 2025-07-16
+- Fixed a critical import bug introduced in version `2.2.0`.
 
-- Добавлены компоненты:
+---
+
+## [2.2.0] – 2025-07-16
+
+### ✨ Added
+
+- New components:
   - `AppTextarea`
   - `AppCheckbox`
   - `AppRadio`
 
-## [2.1.0] - 2025-07-13
-
-- Добавлен Storybook-like UI интерфейс
-
-## [2.0.1] - 2025-07-09
-
-- Добавлен CHANGELOG.md
-
-## [2.0.0] — 2025-07-09
-
-### ⚠️ Changed
-
-- Bugfix of components:
-  - `AppModal`
-  - `AppSelect`
-  - `AppTable`
-- Добавлен `AppDropdown`
-- Скорректирована типизация
-
 ---
 
-## [1.0.0] — 2025-07-07
+## [2.1.0] – 2025-07-13
 
 ### ✨ Added
 
-- Первая стабильная версия фреймворка
-- Минимальная документация в README.md
-- 6 компонентов:
+- Introduced a Storybook-like UI interface for component previews.
+
+---
+
+## [2.0.1] – 2025-07-09
+
+### 📝 Added
+
+- `CHANGELOG.md` file created.
+
+---
+
+## [2.0.0] – 2025-07-09
+
+### ⚠️ Changed
+
+- Fixed bugs in the following components:
+  - `AppModal`
+  - `AppSelect`
+  - `AppTable`
+- Added new component: `AppDropdown`
+- Improved type definitions
+
+---
+
+## [1.0.0] – 2025-07-07
+
+### ✨ Added
+
+- First stable release of the framework
+- Minimalistic documentation in `README.md`
+- Included 6 components:
   - `AppButton`
   - `AppInput`
   - `AppAlert`
@@ -52,19 +68,17 @@
 
 ---
 
-## [1.0.0-alpha.2] — 2025-07-07
+## [1.0.0-alpha.2] – 2025-07-07
 
 ### 🔧 Changed
 
-- Добавлена типизация при помощи декларации `.d.ts`
+- Added `.d.ts` type declaration files
 
 ---
 
-## [1.0.0-alpha.1] — 2025-07-07
+## [1.0.0-alpha.1] – 2025-07-07
 
 ### 🎉 Initial Release
 
-- Структура UI-фреймворка как npm-пакета
-- Сканирование Tailwind-классов — **внешнее**
-
----
+- Project structured as an npm package
+- Tailwind CSS scanning was **external**

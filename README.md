@@ -1,18 +1,16 @@
 # UI Framework for Vue
 
-Минималистичный UI Framework для Vue 3, написанный с использованием Tailwind CSS и VueUse.
+A minimalistic UI Framework for Vue 3, built with Tailwind CSS and VueUse.
 
-## 🚀 Установка
+## 🚀 Installation
 
 `npm install @maikovskii-danil/ui-framework-vue`
 
-## ⚙️ Настройка
-
-Добавьте сканирование классов Tailwind из пакета (показан пример @source для путя /src/\*.css):
+Also add scaning of Tailwind from a package (example @source for path /src/\*.css):
 
 `@source '../node_modules/@maikovskii-danil/ui-framework-vue/dist/ui-framework-vue.css';`
 
-## 🤝 Зависимости (peerDependencies)
+## 🤝 peerDependencies
 
 - "@vueuse/core": "^13.2.0",
 - "tailwindcss": "^4.1.11",
@@ -20,17 +18,15 @@
 
 ## 🛠 About Enviroment
 
-🖥️ Проект разработан и протестирован для macOS/linux для Chrome
+🖥️ Developed and tested on macOS/Linux (Chrome)
 
 ⚙️ Node.js: 22.17.0
 
 📦 npm: 11.4.2
 
-❗ Поддержка Windows не гарантируется
+❗ Windows is not officially supported.
 
-##### Но Вы можете попробовать его запустить на Windows.
-
-##### Для этого удалите поле "os" в package.json или измените на значение ниже:
+💡 However, you can still try running it on Windows. To do so, delete the "os" field in package.json, or change it to:
 
 ```json
 {
@@ -38,13 +34,13 @@
 }
 ```
 
-## 📦 Сборка пакета
+## 📦 Build of a package
 
 `npm run package:build`
 
-###### Бандл находится в dist/index.js
+###### The bundle will be located at dist/index.js
 
-## 📚 Компоненты
+## 📚 Available Components
 
 - `<AppAlert />`
 - `<AppButton />`
@@ -57,32 +53,32 @@
 - `<AppCheckbox />`
 - `<AppRadio />`
 
-## ✨ Особенности
+## ✨ Features
 
-- Поддержка v-model
-- Типизация на уровне пакета (.d.ts файлы)
-- Тёмная тема через Tailwind
+- Support of v-model
+- Type definitions included (.d.ts)
+- TailwindCSS Dark Mode
 
-## 🧪 Пример использования
+## 🧪 Example of usage
 
 `<AppInput
   v-model="username"
-  placeholder="Введите имя"
-  :error="hasError && 'Имя обязательно'"
+  placeholder="Enter name"
+  :error="hasError && 'Required name'"
 />`
 
-`<AppButton @click="submit">Сохранить</AppButton>`
+`<AppButton @click="submit">Save</AppButton>`
 
-## 🔗 Полезные ссылки
+## 🔗 Useful links
 
-#### 📘 Интерактивная документация компонентов (Histoire) по ссылке на Vercel:
+#### 📘 Interactive component documentation (Histoire) hosted on Vercel:
 
 ###### [ui-framework-vue.vercel.app](https://ui-framework-vue.vercel.app/)
 
-#### 📝 История версий и список изменений:
+#### 📝 Version history and changelog:
 
 ###### [🕒 CHANGELOG.md](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/CHANGELOG.md)
 
-#### ⚙️ Скрипты разработки (npm scripts):
+#### ⚙️ ⚙️ Development scripts:
 
-###### [Документация всех npm run-команд, с пояснениями по задачам](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/scripts-map.md)
+###### [Script documentation of all npm run-commands, with comments](https://github.com/maikovskii-danil/ui-framework-vue/blob/main/docs/scripts-map.md)
