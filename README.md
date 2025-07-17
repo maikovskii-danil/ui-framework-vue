@@ -34,6 +34,8 @@ Also add scanning of Tailwind from a package (example @source for path /src/\*.c
 }
 ```
 
+##### After run `npm install`
+
 ## 📦 Build of a package
 
 `npm run package:build`
