@@ -1,5 +1,4 @@
 npm clean-install --fund false --audit false
-npm run prettierCheck
-npm run lintOnly
+npx lint-staged
 npm run typecheck
 npm audit
