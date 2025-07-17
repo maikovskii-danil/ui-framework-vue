@@ -29,5 +29,5 @@
 
 <script setup lang="ts">
 const model = defineModel<boolean>();
-const { disabled } = defineProps<{ disabled: boolean }>();
+const { disabled } = defineProps<{ disabled?: boolean }>();
 </script>
