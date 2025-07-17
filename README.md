@@ -6,7 +6,7 @@ A minimalistic UI Framework for Vue 3, built with Tailwind CSS and VueUse.
 
 `npm install @maikovskii-danil/ui-framework-vue`
 
-Also add scaning of Tailwind from a package (example @source for path /src/\*.css):
+Also add scanning of Tailwind from a package (example @source for path /src/\*.css):
 
 `@source '../node_modules/@maikovskii-danil/ui-framework-vue/dist/ui-framework-vue.css';`
 
