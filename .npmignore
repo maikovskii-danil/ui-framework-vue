@@ -4,6 +4,7 @@ node_modules
 src
 docs
 configs
+scripts
 public
 .github
 .histoire

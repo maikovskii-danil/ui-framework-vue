@@ -1,6 +1,6 @@
 {
   "name": "@maikovskii-danil/ui-framework-vue",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "prettier": "@maikovskii-danil/prettier-config-vue",
   "type": "module",
   "license": "MIT",
@@ -16,8 +16,9 @@
     "url": "git+https://github.com/maikovskii-danil/ui-framework-vue.git"
   },
   "scripts": {
+    "generate": "node scripts/generate-index.cjs",
     "cleanInstall": "npm clean-install --fund false --audit false",
-    "prepackage:build": "npm run cleanInstall",
+    "prepackage:build": "run-s cleanInstall generate",
     "package:build": "vite build --config ./configs/vite.config.ts",
     "prelint": "npm run cleanInstall",
     "lint": "npm run lintOnly",

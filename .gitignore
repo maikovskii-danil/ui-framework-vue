@@ -3,3 +3,4 @@ node_modules
 .vscode
 .histoire
 dist
+src/index.ts
