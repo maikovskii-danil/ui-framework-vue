@@ -12,7 +12,7 @@ Also add scanning of Tailwind from a package (example @source for path /src/\*.c
 
 ## 🤝 peerDependencies
 
-- "@vueuse/core": "^13.2.0",
+- "@vueuse/core": "^13.5.0",
 - "tailwindcss": "^4.1.11",
 - "vue": "^3.5.16"
 
